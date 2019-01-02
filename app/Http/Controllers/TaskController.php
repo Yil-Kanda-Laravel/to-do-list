@@ -19,8 +19,7 @@ class TaskController extends Controller
 		$input = $request->all();
 		$task = new Task();
 		$task->name = request("name");
-		$task->date = Carbon::createFromFormat('Y-m-d', $request->input('date'));//Carbon::parse(date("Y-m-d"));//$request->datepicker);//date("Y-m-d");
-		//dd($task);
+		$task->date = Carbon::createFromFormat('Y-m-d', $request->input('date'));
 		$task->save();
 		return Redirect::back()->with("message", "Task has been added");
 	}
