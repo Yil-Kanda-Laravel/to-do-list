@@ -18,7 +18,7 @@
 		}
 		span {
 			cursor: pointer;
-			float: left;
+			float: right;
 		}
 	</style>
 </head>

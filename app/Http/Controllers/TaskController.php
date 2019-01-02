@@ -18,6 +18,7 @@ class TaskController extends Controller
 		$input = $request->all();
 		$task = new Task();
 		$task->name = request("name");
+		$task->date = date("Y-m-d");
 		$task->save();
 		return Redirect::back()->with("message", "Task has been added");
 	}
