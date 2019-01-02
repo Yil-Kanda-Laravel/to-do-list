@@ -17,7 +17,7 @@
                     <input class="form-control" name="name" placeholder="Enter Task" type="text">
                 </div>
                 <div class="form-group">
-                    <input class="form-control" name="date" type="date">
+                    <input class="form-control date" name="date" type="date">
                 </div>
                 <div class="form-group">
                     <button class="btn btn-success" type="submit">Add</button>
