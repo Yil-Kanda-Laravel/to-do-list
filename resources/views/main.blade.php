@@ -1,13 +1,14 @@
 @extends("layouts.app") 
 @section("content")
     <div class="container">
+        
+        <div class="col-md-6">
         @if(session()->has('message'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
             <strong>Done !!!</strong> {{ session()->get('message') }} 
             <button aria-label="Close" class="close" data-dismiss="alert" type="button"><span aria-hidden="true">&times;</span></button>
         </div>
         @endif
-        <div class="col-md-6">
             <h1>Todo List</h1>
             <form action="{{url('/task')}}" method="post">
                 {{csrf_field()}}
@@ -19,21 +20,22 @@
                 </div>
             </form>
             <hr>
-            <ol>
+            <h4>In Process</h4>
+            <ul>
                 <li style="list-style: none">
                     @foreach($tasks as $task)
-                    <a href="{{url('/'.$task->id.'/complete')}}">{{ $task->name }}</a>
+                    <p><a href="{{url('/'.$task->id.'/complete')}}">{{ $task->name }} <span class="check fa fa-check"></span></a></p>
                     @endforeach
                 </li>
-            </ol>
+            </ul>
             <h4>Completed</h4>
-            <ol>
+            <ul>
                 <li style="list-style: none">
                     @foreach($completed_tasks as $c_task)
-                    <a href="{{url('/'.$c_task->id.'/delete')}}">{{ $c_task->name }}</a>
+                    <p><a href="{{url('/'.$c_task->id.'/delete')}}">{{ $c_task->name }} <span class="delete fa fa-times"></span></a></p>
                     @endforeach
                 </li>
-            </ol>
+            </ul>
         </div>
     </div>
 @endsection

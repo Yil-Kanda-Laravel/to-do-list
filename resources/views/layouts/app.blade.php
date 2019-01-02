@@ -5,6 +5,22 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js">
     </script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.css" rel="stylesheet" type="text/css">
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		p {
+			  cursor: pointer;
+			  position: relative;
+			  padding: 12px 8px 12px 40px;
+			  background: #eee;
+			  font-size: 18px;
+			  transition: 0.2s;
+		}
+		span {
+			cursor: pointer;
+			float: left;
+		}
+	</style>
 </head>
 <body>
 	<div id="app">
